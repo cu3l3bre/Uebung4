@@ -4,8 +4,20 @@
 
 using namespace std;
 
+
+void SchreibeZeichen()
+{
+	for (int i = 33; i < 255; i++)
+	{
+		cout << "Zeichen: " << char(i) << " Nummer: " << i << endl;
+	}
+
+}
+
 int main()
 {
+	SchreibeZeichen();
+
 
 	srand(time(0));
 
@@ -153,6 +165,46 @@ int main()
 			cout << "Sie habe nur " << AnzahlVersuche << " Versuche gebraucht! :) Toll!!!" << endl;
 		}
 	}
+
+
+
+
+
+
+	// Schreiben Sie ein Programm, dass zu einem eingegebenen Zeichen (char) den dazugehörigen Zahlencode ausgibt (ASCII). Schreiben Sie auch eine Funktion, die alle lesbaren Zeichen der ASCII-Tabelle auf der Konsole ausgibt. 
+	//b) Bei einem Zeichen, dass der Benutzer eingegeben hat, soll jetzt herausgefunden werden, ob es sich um einen Kleinbuchstaben(a - z), Grossbuchstaben(A - Z) oder um eine Ziffer handelt(0 - 9).
+
+	unsigned char EingabeZeichen;
+	unsigned int EingabeWert;
+	cout << "Geben Sie ein Zeichen ein: ";
+	cin >> EingabeZeichen;
+	cout << "Sie haben eingegeben: " << EingabeZeichen << endl;
+	
+	EingabeWert = (int)EingabeZeichen;
+	cout << "Der Zahlenwert zum Zeichen ist: " << EingabeWert << endl;
+
+	// Zahl ist von 48 bis 57
+	if (EingabeWert >= 48 && EingabeWert <= 57)
+	{
+
+		cout << "Ziffer" << endl;
+	}
+	// kl Buchstabe ist von 97 bis 122
+	else if (EingabeWert >= 97 && EingabeWert <= 122)
+	{
+		cout << "Kleiner Buchstabe" << endl;
+	}
+	// gr Buchstabe ist von 65 bis 90
+	else if (EingabeWert >= 65 && EingabeWert <= 90)
+	{
+		cout << "Grosser Buchstabe" << endl;
+	}
+	else
+	{
+		cout << "Weder eine Ziffer, ein kleiner Buchstabe, noch ein grosser Buchstabe" << endl;
+	}
+
+
 
 	system("pause");
 	return 0;
