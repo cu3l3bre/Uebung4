@@ -1,5 +1,5 @@
 #include <iostream>
-#include "time.h"
+#include <time.h>
 
 
 using namespace std;
@@ -175,7 +175,7 @@ int main()
 	//b) Bei einem Zeichen, dass der Benutzer eingegeben hat, soll jetzt herausgefunden werden, ob es sich um einen Kleinbuchstaben(a - z), Grossbuchstaben(A - Z) oder um eine Ziffer handelt(0 - 9).
 
 	unsigned char EingabeZeichen;
-	unsigned int EingabeWert;
+	int EingabeWert;
 	cout << "Geben Sie ein Zeichen ein: ";
 	cin >> EingabeZeichen;
 	cout << "Sie haben eingegeben: " << EingabeZeichen << endl;
