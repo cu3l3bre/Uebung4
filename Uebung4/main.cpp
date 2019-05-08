@@ -201,7 +201,7 @@ int main()
 	}
 	else
 	{
-		cout << "Weder eine Ziffer, ein kleiner Buchstabe, noch ein grosser Buchstabe" << endl;
+		cout << "Weder eine Ziffer, ein kleiner Buchstabe (a-z) , noch ein grosser Buchstabe (A-Z)" << endl;
 	}
 
 
