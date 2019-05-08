@@ -111,7 +111,19 @@ int main()
 	bool SpielVerlasen = false;
 
 	ZufallsNummer = (rand()%6) + 1;
-	
+
+	// Hinweis hierzu zur Berechnung der Zufallsnummer mit %
+	// 6  / 6 = 1 Rest 0
+	// 7  / 6 = 1 Rest 1
+	// 8  / 6 = 1 Rest 2
+	// 9  / 6 = 1 Rest 3
+	// 10 / 6 = 1 Rest 4
+	// 11 / 6 = 1 Rest 5
+	// 12 / 6 = 2 Rest 0
+	// dh mit %6 bekomme ich immer den rest von 0 bis 5, deswegen rechne ich +1 um die wuerfelzahlen zu bekommen
+
+
+		
 	//int randtest = rand();
 	//cout << randtest << endl;
 	//cout << randtest%6 << endl;
@@ -158,20 +170,11 @@ int main()
 
 	ZufallsNummer = (rand() % 6) + 1;
 
-	// Hinweis hierzu zur Berechnung der Zufallsnummer mit %
-	// 6  / 6 = 1 Rest 0
-	// 7  / 6 = 1 Rest 1
-	// 8  / 6 = 1 Rest 2
-	// 9  / 6 = 1 Rest 3
-	// 10 / 6 = 1 Rest 4
-	// 11 / 6 = 1 Rest 5
-	// 12 / 6 = 2 Rest 0
 
-	// dh mit %6 bekomme ich immer den rest von 0 bis 5, deswegen rechne ich +1 um die wuerfelzahlen zu bekommen
 
 
 	cout << endl;
-	cout << "Ratespiel 2 Ich zahele Ihre Versuche" << endl;
+	cout << "Ratespiel 2 Ich zaehle Ihre Versuche" << endl;
 	cout << "Die Nummer ist: " << ZufallsNummer << endl;
 	cout << "Es wurde gewuerfelt, raten Sie die Zahl (1-6): ";
 
@@ -180,7 +183,7 @@ int main()
 	{
 		AnzahlVersuche++;
 		cin >> BenutzerNummer;
-		if ((BenutzerNummer == ZufallsNummer))
+		if (BenutzerNummer == ZufallsNummer)
 		{
 			SpielVerlasen = true;
 			cout << "Richtig geraten!!!" << endl;
@@ -267,8 +270,6 @@ int main()
 	{
 		cout << "Weder eine Ziffer, ein kleiner Buchstabe (a-z) , noch ein grosser Buchstabe (A-Z)" << endl;
 	}
-
-
 
 	system("pause");
 	return 0;
