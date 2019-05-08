@@ -19,6 +19,15 @@
 //4. Verändern Sie das Programm so, dass nun Zufallszahlen zwischen 1 und 100 möglich sind.Damit der Anwender leichter zur Lösung kommt, soll nach jedem falschen Versuch angegeben werden, ob die gesuchte Zahl kleiner oder größer als der Rateversuch ist.
 
 
+//Bonusaufgaben:
+//
+//Zu Aufgabe 1.c) ab wann ist der Wertebereich der ganzen Zahlen bei der Fakultät überschritten ? Finden Sie eine Möglichkeit, dann die Ausgabe abzubrechen und eine entsprechende Meldung auszugeben.
+//
+//Schreiben Sie ein Programm, dass zu einem eingegebenen Zeichen(char) den dazugehörigen Zahlencode ausgibt(ASCII).Schreiben Sie auch eine Funktion, die alle lesbaren Zeichen der ASCII - Tabelle auf der Konsole ausgibt.
+//b) Bei einem Zeichen, dass der Benutzer eingegeben hat, soll jetzt herausgefunden werden, ob es sich um einen Kleinbuchstaben(a - z), Grossbuchstaben(A - Z) oder um eine Ziffer handelt(0 - 9).
+
+
+
 
 #include <iostream>
 #include <time.h>
@@ -26,7 +35,7 @@
 
 using namespace std;
 
-
+// Funktion zu Bonusaufgaben
 void SchreibeZeichen()
 {
 	for (int i = 33; i < 255; i++)
@@ -38,7 +47,7 @@ void SchreibeZeichen()
 
 int main()
 {
-	SchreibeZeichen();
+	
 
 
 	srand(time(0));
@@ -87,8 +96,7 @@ int main()
 	int BenutzerNummer, ZufallsNummer, AnzahlVersuche = 0;
 	bool SpielVerlasen = false;
 
-	//srand(time(0)); // TODO nachgucken was das genau macht
-	ZufallsNummer = (rand()%6) + 1; // TODO nachgucken was das genau macht
+	ZufallsNummer = (rand()%6) + 1;
 
 	cout << "Ratespiel 1 Sie haben 3 Versuche" << endl;
 	cout << "Die Nummer ist: " << ZufallsNummer << endl;
@@ -127,9 +135,9 @@ int main()
 	AnzahlVersuche = 0;
 
 	int test = time(0);
+	cout << "Test Time ist: " << test << endl;
 
-	//srand(time(0)); // TODO nachgucken was das genau macht
-	ZufallsNummer = (rand() % 6) + 1; // TODO nachgucken was das genau macht
+	ZufallsNummer = (rand() % 6) + 1;
 
 	cout << endl;
 	cout << "Ratespiel 2 Ich zahele Ihre Versuche" << endl;
@@ -158,8 +166,7 @@ int main()
 	SpielVerlasen = false;
 	AnzahlVersuche = 0;
 
-	//srand(time(0)); // TODO nachgucken was das genau macht
-	ZufallsNummer = (rand() % 100) + 1; // TODO nachgucken was das genau macht
+	ZufallsNummer = (rand() % 100) + 1;
 
 	cout << endl;
 	cout << "Ratespiel 3 Raten Sie die Zahl" << endl;
@@ -190,11 +197,16 @@ int main()
 
 
 
+	
 
 
 
 	// Schreiben Sie ein Programm, dass zu einem eingegebenen Zeichen (char) den dazugehörigen Zahlencode ausgibt (ASCII). Schreiben Sie auch eine Funktion, die alle lesbaren Zeichen der ASCII-Tabelle auf der Konsole ausgibt. 
 	//b) Bei einem Zeichen, dass der Benutzer eingegeben hat, soll jetzt herausgefunden werden, ob es sich um einen Kleinbuchstaben(a - z), Grossbuchstaben(A - Z) oder um eine Ziffer handelt(0 - 9).
+
+
+	SchreibeZeichen();
+
 
 	unsigned char EingabeZeichen;
 	int EingabeWert;
@@ -208,7 +220,6 @@ int main()
 	// Zahl ist von 48 bis 57
 	if (EingabeWert >= 48 && EingabeWert <= 57)
 	{
-
 		cout << "Ziffer" << endl;
 	}
 	// kl Buchstabe ist von 97 bis 122
