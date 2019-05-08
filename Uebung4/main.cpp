@@ -1,3 +1,25 @@
+
+
+//Aufgabenbeschreibung
+//Übungen zu Kontrollstrukturen / Schleifen
+//
+//1. Geben Sie die Zahlen einmal von 1 - 100 aus, dann in umgekehrter Reihenfolge.
+//2. Geben Sie die Zahlen von 1 bis zur Zahl X aus, X wird vom Benutzer eingegeben.
+//b) Berechnen Sie dabei auch die Gesamtsumme aller Zahlen von 1 bis zum eingegebenen Wert.
+//c) Zusätzlich soll auch gleich die Fakultät der Zahlen berechnet und ausgegeben werden.
+//
+//
+//
+//Ratespiel
+//
+//Finden Sie selbstständig heraus, wie in C++ eine Zufallszahl erzeugt wird.
+//1. Schreiben Sie ein Programm, das beim Start eine zufällige Zahl zwischen 1 und 6 (Würfeln)erzeugt.Nun soll der Benutzer eine Zahl selbst eingeben.Vergleichen Sie die Zahl mit der Zufallszahl und geben bei Gleichheit eine Erfolgsmeldung aus, andernfalls einen Hinweis, dass die Zahl nicht richtig geraten wurde.
+//2. Erweitern Sie das Ratespiel so, dass der Benutzer nun genau 3 Versuche hat, die Zahl zu raten.
+//3. Jetzt soll der Benutzer so lange die Zahl erraten können, bis die Zahl übereinstimmt.Geben Sie am Ende die Anzahl der Versuche aus.
+//4. Verändern Sie das Programm so, dass nun Zufallszahlen zwischen 1 und 100 möglich sind.Damit der Anwender leichter zur Lösung kommt, soll nach jedem falschen Versuch angegeben werden, ob die gesuchte Zahl kleiner oder größer als der Rateversuch ist.
+
+
+
 #include <iostream>
 #include <time.h>
 
@@ -9,7 +31,7 @@ void SchreibeZeichen()
 {
 	for (int i = 33; i < 255; i++)
 	{
-		cout << "Zeichen: " << char(i) << " Nummer: " << i << endl;
+		cout << "Zeichen: " << unsigned char(i) << " Nummer: " << i << endl;
 	}
 
 }
