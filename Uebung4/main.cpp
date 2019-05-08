@@ -48,10 +48,6 @@ void SchreibeZeichen()
 int main()
 {
 	
-
-
-	srand(time(0));
-
 	// Schleifen 1)
 	cout << "von 1 nach 100" << endl;
 	for (int i = 1; i <= 100; i++)
@@ -91,12 +87,35 @@ int main()
 		cout << EingabeZahl << " entspricht nicht den Anforderungen" << endl;
 	}
 
-
 	// Ratespiel 1)
+
+	int Uhrzeit = time(0);	// Akutuelle Uhrzeit als UnixTimeStamp
+	
+	
+	// Startwert von srand wird auch als Seed bezeichnet
+	// srand sollte am besten nur ein mal zu Beginn des Programms aufgerufen werden
+	
+	// Zufallsgenerator starten mit der aktuellen Uhrzeit als Startwert
+	srand(Uhrzeit);			
+
+	// Hinweis zu srand
+	// srand(time(0))
+	// *mache irgendwas mit rand*
+	// srand(time(0))
+	// *mache nochmal irgendwas mit rand*
+	// dann würden diei zufallszahlen die durch srand ermittelt werden, die gleichen sein
+	// da es in der gleichen Sekunde aufgerufen wird, also nur einmal die srand funktion benutzen
+
+
 	int BenutzerNummer, ZufallsNummer, AnzahlVersuche = 0;
 	bool SpielVerlasen = false;
 
 	ZufallsNummer = (rand()%6) + 1;
+	
+	//int randtest = rand();
+	//cout << randtest << endl;
+	//cout << randtest%6 << endl;
+
 
 	cout << "Ratespiel 1 Sie haben 3 Versuche" << endl;
 	cout << "Die Nummer ist: " << ZufallsNummer << endl;
@@ -135,9 +154,21 @@ int main()
 	AnzahlVersuche = 0;
 
 	int test = time(0);
-	cout << "Test Time ist: " << test << endl;
+	//cout << "Test Time ist: " << test << endl;
 
 	ZufallsNummer = (rand() % 6) + 1;
+
+	// Hinweis hierzu zur Berechnung der Zufallsnummer mit %
+	// 6  / 6 = 1 Rest 0
+	// 7  / 6 = 1 Rest 1
+	// 8  / 6 = 1 Rest 2
+	// 9  / 6 = 1 Rest 3
+	// 10 / 6 = 1 Rest 4
+	// 11 / 6 = 1 Rest 5
+	// 12 / 6 = 2 Rest 0
+
+	// dh mit %6 bekomme ich immer den rest von 0 bis 5, deswegen rechne ich +1 um die wuerfelzahlen zu bekommen
+
 
 	cout << endl;
 	cout << "Ratespiel 2 Ich zahele Ihre Versuche" << endl;
